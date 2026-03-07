@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Contestants | Face of Maison Visage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Face of Maison Visage</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contestants.html" class="active">Contestants</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="register.html" class="btn-primary">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h1 class="page-title">Live Leaderboard</h1>
+        <div class="search-bar">
+            <input type="text" id="searchContestant" placeholder="Search for a contestant...">
+        </div>
+        
+        <div class="contestants-grid" id="contestantsGrid">
+            <!-- Rendered by Javascript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Face of Maison Visage. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

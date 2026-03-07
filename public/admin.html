@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Face of Maison Visage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="logo admin-logo">Face of Maison Visage</div>
+            <ul class="admin-nav">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="contestants.html">Manage Contestants</a></li>
+                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Settings</a></li>
+                <li class="mt-auto"><a href="index.html">Back to Site</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2>Overview</h2>
+                <div class="admin-user">Admin User</div>
+            </header>
+
+            <div class="dashboard-metrics">
+                <div class="metric-card">
+                    <h4>Total Revenue</h4>
+                    <h2 id="totalRevenue" class="text-success">₦0.00</h2>
+                </div>
+                <div class="metric-card">
+                    <h4>Total Votes Cast</h4>
+                    <h2 id="totalSiteVotes">0</h2>
+                </div>
+                <div class="metric-card">
+                    <h4>Active Contestants</h4>
+                    <h2 id="totalContestants">0</h2>
+                </div>
+                <div class="metric-card">
+                    <h4>Pending Transfers</h4>
+                    <h2 class="text-warning">12</h2>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card dashboard-card">
+                    <h3>Recent Transactions</h3>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Voter</th>
+                                    <th>Contestant</th>
+                                    <th>Amount</th>
+                                    <th>Method</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionsTable">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card dashboard-card">
+                    <h3>Top Contestants</h3>
+                    <div class="top-contestants-list" id="adminTopContestants">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

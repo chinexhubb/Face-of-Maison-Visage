@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Face of Maison Visage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Face of Maison Visage</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contestants.html">Contestants</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="register.html" class="active btn-primary">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h1 class="page-title">Registration</h1>
+        <div class="card form-container">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="jane@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Short Bio</label>
+                    <textarea id="bio" rows="4" required placeholder="Tell us about yourself..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Upload Portrait Photo</label>
+                    <input type="file" id="photo" accept="image/*">
+                </div>
+                <button type="submit" class="btn-primary full-width">Submit Registration</button>
+            </form>
+
+            <div id="successMessage" class="hidden success-box">
+                <h3>Registration Successful!</h3>
+                <p>Welcome to the contest. Here is your unique voting link to share with your fans:</p>
+                <div class="link-box">
+                    <input type="text" id="votingLink" readonly>
+                    <button id="copyLinkBtn" class="btn-secondary">Copy</button>
+                </div>
+                <p class="small-text">Share this link directly so people can vote for you!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Face of Maison Visage. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

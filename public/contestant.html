@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote | Face of Maison Visage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Face of Maison Visage</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contestants.html">Contestants</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="register.html" class="btn-primary">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="profile-container">
+            <div class="profile-left">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Contestant Image" id="profileImage" class="profile-main-image">
+                <h2 id="profileName" class="profile-name">Loading...</h2>
+                <div class="vote-badge">Total Votes: <span id="profileVotes">--</span></div>
+                <p id="profileBio" class="profile-bio">Loading bio...</p>
+            </div>
+
+            <div class="profile-right">
+                <div class="card payment-card">
+                    <h3>Vote for <span id="voteForName">Her</span></h3>
+                    <p>Select number of votes and payment method.</p>
+                    
+                    <div class="form-group">
+                        <label for="voteCount">Number of Votes (₦100 per vote)</label>
+                        <input type="number" id="voteCount" min="1" value="10">
+                        <div class="total-amount">Total: ₦<span id="calcTotal">1,000.00</span></div>
+                    </div>
+
+                    <div class="payment-tabs">
+                        <button class="tab-btn active" data-tab="card">Pay Online (Paystack)</button>
+                        <button class="tab-btn" data-tab="transfer">Bank Transfer</button>
+                    </div>
+
+                    <div id="cardTab" class="tab-content active">
+                        <div class="form-group">
+                            <label>Your Email (for receipt)</label>
+                            <input type="email" id="voterEmail" placeholder="voter@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Name (optional)</label>
+                            <input type="text" id="voterName" placeholder="John Doe">
+                        </div>
+                        <button class="btn-primary full-width" id="paystackBtn">Pay & Vote with Paystack</button>
+                    </div>
+
+                    <div id="transferTab" class="tab-content hidden">
+                        <div class="transfer-info">
+                            <p>Please transfer exactly <strong>₦<span id="transferAmount">1000.00</span></strong> to the account below:</p>
+                            <div class="bank-details">
+                                <p>Bank: <strong>GTBank</strong></p>
+                                <p>Account Name: <strong>Face of Maison Visage</strong></p>
+                                <p>Account No: <strong>1234567890</strong></p>
+                            </div>
+                            <p class="small-text mt-2">Click below once transfer is completed.</p>
+                            <button class="btn-primary full-width mt-2" id="transferPayBtn">I have made the transfer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Face of Maison Visage. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Paystack Inline JS -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
